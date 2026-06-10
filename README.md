@@ -1,20 +1,9 @@
-# MiniTodo iOS
+# MiniProjectIos
 
-MiniTodo es una app básica para iPhone hecha en SwiftUI.
+Este proyecto es solo un test para probar cómo funciona la MacBook Neo al compilar una app Android.
 
-## Qué incluye
+No tiene otro objetivo ni funcionalidad adicional: sirve únicamente para verificar el proceso de compilación y entorno.
 
-- agregar tareas
-- marcar tareas como hechas
-- borrar tareas
-- persistencia local simple en JSON
+Esta es una imagen de la propia app funcionando perfectamente.
 
-## Cómo abrirla
-
-1. Abrí `MiniTodo.xcodeproj` en Xcode.
-2. Elegí un `Signing Team` en `TARGETS > MiniTodo > Signing & Capabilities`.
-3. Ejecutá la app en un simulador o conectá un iPhone físico.
-
-## Estado
-
-Esto ya es un proyecto iOS real, no una app de consola de macOS.
+![MiniTodo funcionando correctamente](public/MiniTodo.jpeg)
