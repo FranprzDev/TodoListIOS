@@ -1,0 +1,239 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.MiniTodo-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/sources",
+      "importPath" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/franciscoperez/Desktop/MiniProjectIos/Sources/MiniTodo/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "MiniTodo",
+      "moduleOutputPath" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/Modules/MiniTodo.swiftmodule",
+      "objects" : [
+        "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j6",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "MiniTodo_main",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "miniprojectios"
+      ],
+      "outputFileMapPath" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/Modules/MiniTodo.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/franciscoperez/Desktop/MiniProjectIos/Sources/MiniTodo/main.swift"
+      ],
+      "tempsPath" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "MiniTodo" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "MiniTodo",
+      "-package-name",
+      "miniprojectios",
+      "-c",
+      "/Users/franciscoperez/Desktop/MiniProjectIos/Sources/MiniTodo/main.swift",
+      "-I",
+      "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j6",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "MiniTodo_main",
+      "-swift-version",
+      "6",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "miniprojectios",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "MiniTodo" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/franciscoperez/Desktop/MiniProjectIos/Sources/MiniTodo/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/sources"
+    },
+    "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo-entitlement.plist"
+    },
+    "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo.product/Objects.LinkFileList"
+    },
+    "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}

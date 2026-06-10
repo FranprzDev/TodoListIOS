@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "MiniTodo-arm64-apple-macosx-debug.module": ["<MiniTodo-arm64-apple-macosx-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<MiniTodo-arm64-apple-macosx-debug.module>","<minitodo-arm64-apple-macosx-debug.exe>"]
+  "minitodo-arm64-apple-macosx-debug.exe": ["<minitodo-arm64-apple-macosx-debug.exe>"]
+  "test": ["<MiniTodo-arm64-apple-macosx-debug.module>","<minitodo-arm64-apple-macosx-debug.exe>"]
+default: "main"
+nodes:
+  "/Users/franciscoperez/Desktop/MiniProjectIos/Sources/MiniTodo/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo":
+    is-mutated: true
+commands:
+  "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/franciscoperez/Desktop/MiniProjectIos/Sources/MiniTodo/main.swift"]
+    outputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/sources"]
+    description: "Write auxiliary file /Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/sources"
+
+  "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo-entitlement.plist"]
+    description: "Write auxiliary file /Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo-entitlement.plist"
+
+  "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.swift.o"]
+    outputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo.product/Objects.LinkFileList"
+
+  "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<MiniTodo-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.swift.o","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/Modules/MiniTodo.swiftmodule"]
+    outputs: ["<MiniTodo-arm64-apple-macosx-debug.module>"]
+
+  "<minitodo-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<minitodo-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<minitodo-arm64-apple-macosx-debug.exe>"]
+
+  "C.MiniTodo-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/Sources/MiniTodo/main.swift","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/sources"]
+    outputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.swift.o","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/Modules/MiniTodo.swiftmodule"]
+    description: "Compiling Swift Module 'MiniTodo' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","MiniTodo","-emit-dependencies","-emit-module","-emit-module-path","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/Modules/MiniTodo.swiftmodule","-output-file-map","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/output-file-map.json","-incremental","-c","@/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/sources","-I","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j6","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","MiniTodo_main","-swift-version","6","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","miniprojectios"]
+
+  "C.minitodo-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.swift.o","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo.product/Objects.LinkFileList"]
+    outputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/minitodo"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug","-o","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo","-module-name","minitodo","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_MiniTodo_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/Modules/MiniTodo.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.minitodo-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo-entitlement.plist"]
+    outputs: ["<minitodo-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/minitodo"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo-entitlement.plist","/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/minitodo"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/franciscoperez/Desktop/MiniProjectIos/Sources/MiniTodo/","/Users/franciscoperez/Desktop/MiniProjectIos/Package.swift","/Users/franciscoperez/Desktop/MiniProjectIos/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

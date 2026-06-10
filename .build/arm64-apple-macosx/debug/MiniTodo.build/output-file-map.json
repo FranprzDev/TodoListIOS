@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/primary.swiftdeps"
+  },
+  "/Users/franciscoperez/Desktop/MiniProjectIos/Sources/MiniTodo/main.swift": {
+    "dependencies": "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.d",
+    "object": "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.swift.o",
+    "swiftmodule": "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.swiftdeps",
+    "diagnostics": "/Users/franciscoperez/Desktop/MiniProjectIos/.build/arm64-apple-macosx/debug/MiniTodo.build/main.dia"
+  }
+}
